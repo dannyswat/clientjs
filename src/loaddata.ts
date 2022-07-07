@@ -1,5 +1,10 @@
 import countries from './data.json';
 
-export function getCountryList() {
+export interface Country {
+    id: number,
+    name: string
+}
+
+export function getCountryList() : Country[] {
     return countries;
 }
