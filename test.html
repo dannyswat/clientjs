@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="page">
+        <ul id="countryList"></ul>
+    </div>
     <script type="text/javascript" src="dist/app-bundle.js"></script>
     <script type="text/javascript">
+        document.getElementById('countryList').innerHTML = uuka.api.getCountryList().map(c => '<li>' + c.name + '</li>').join('');
         uuka.test.ohNo();
     </script>
 </body>
